@@ -1,0 +1,31 @@
+
+@font-face {
+  font-family: "arcade";
+  src: local("arcade"), url("./font/arcade.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "arcade";
+  src: local("arcade"),
+    url("./font/arcade.ttf") format("truetype");
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  background-image: url(./images/bg.jpg);
+  height: 97vh;
+  font-family: arcade, serif;
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+    background-position: bottom, top;
+    background-image: url(./images/bg.jpg), url(./images/bg2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat, repeat;
+  }
+}

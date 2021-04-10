@@ -1,0 +1,50 @@
+.startmenu {
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50%;
+    height: 50vh;
+}
+
+.startmenu__info{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.startmenu__info > p{
+    font-size: 18px;
+}
+
+.startmenu__info > h1{
+    text-align: center;
+}
+
+
+.startmenu__link {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: chartreuse;
+    display: flex;
+    top: 0;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .startmenu {
+        margin-top: 50%;
+        height: 50%;
+    }
+        
+    .startmenu__info > p{
+        font-size: 18px;
+    }    
+    
+    .startmenu__link {
+        font-size: 20px;
+        margin: 0 10%;
+    }
+  }

@@ -1,0 +1,50 @@
+.profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile__left {
+    width: 35%;
+    background-color: magenta;
+}
+
+
+.profile__right {
+    width: 65%;
+    background-color: blue;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .profile__left > img {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        object-fit: contain;
+        height: 110px;
+    }
+
+    .profile__left > img {
+        height: 130px;
+    }
+
+    .profile_status {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile_status > img {
+        position: relative;
+        height: 45px;
+    }
+
+    #health {
+        left: 5%;
+    }
+
+    #mana {
+        left: -7%;
+    }
+    
+  }
