@@ -65,4 +65,17 @@
         height: 4vh;
     }
 
+    .profile__redes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .profile__redes > a > img {
+        height: 6vw;
+        background-color: chartreuse;
+        cursor: pointer;
+    }
+
   }
