@@ -38,13 +38,8 @@
         position: relative;
         height: 45px;
     }
-
-    #health {
-        left: 5%;
+    #bar{
+        padding-top: 3px;
+        left: -10%;
     }
-
-    #mana {
-        left: -7%;
-    }
-    
   }
