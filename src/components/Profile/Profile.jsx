@@ -3,8 +3,8 @@ import React from 'react'
 import "./Profile.css"
 //Local
 import profilePic from "../../images/profile.jpg";
-
-import bar from "../../images/bar.png";
+import health from "../../images/health.png";
+import linkedinIcon from "../../images/icons/";
 
 const Profile = () => {
     return (
@@ -12,12 +12,19 @@ const Profile = () => {
             <div className="profile__left">
                 <img src={profilePic} alt="profile"/>
                 <div className="profile_status">
-                    <img id="bar" src={bar} alt="bar"/>
+                    <img src={health} alt="bar"/>
                     
                 </div>
             </div>
             <div className="profile__right">
-                <h2>Derecha</h2>
+                <div className="profile__info">
+                    <p>Nombre: Nicolas Limonoff</p>
+                    <p>Clase: FullStack Developer</p>
+                    <p>Level: Junior</p>
+                </div>
+                <div className="profile__redes">
+                    
+                </div>
             </div>
         </div>
     )
