@@ -17,6 +17,7 @@
 
 .startmenu__info > p{
     font-size: 25px;
+    flex: 1;
 }
 
 .startmenu__info > h1{
@@ -26,6 +27,8 @@
 
 
 .startmenu__link {
+    display: flex;
+    color: white;
     text-decoration: none;
 }
 
@@ -42,6 +45,10 @@
    transition: all 200ms  ease-in;
 }
 
+.icon {
+    margin-left: 5%;
+}
+
 @media screen and (max-width: 600px) {
     .startmenu {
         margin: 15% 2%;
@@ -54,5 +61,9 @@
     .startmenu__link {
         font-size: 20px;
         margin: 0 10%;
+    }
+
+    .icon {
+        visibility: hidden;
     }
   }

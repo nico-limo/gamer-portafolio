@@ -1,10 +1,37 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 //CSS
 import "./StartMenu.css";
+//Sound
+import useSound from "use-sound";
+import selectSound from "../../sounds/select.mp3";
 //React Router Dom
-import { Link } from 'react-router-dom'
-
+import { Link, useHistory } from 'react-router-dom'
+//Material Ui
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const StartMenu = () => {
+  const history = useHistory();
+  const [playselect] = useSound(selectSound, {volume : 0.5});
+  const [clicked, setClicked] = useState(false)
+
+  const arrowsActions = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+      playselect()
+      setTimeout(() => {
+        setClicked(true)
+        history.push("/menu")
+      }, 1000);
+      
+    }
+  }
+
+  useEffect(() => {
+    playselect()
+    document.addEventListener("keydown", arrowsActions)
+
+    return ()=> document.removeEventListener("keydown", arrowsActions)
+    
+  }, [clicked])
+
   return (
     <div className="startmenu">
      

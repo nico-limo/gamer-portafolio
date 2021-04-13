@@ -47,6 +47,7 @@
 }
 
 .profile__redes {
+    padding: 2%;
     display: flex;
     flex-direction: row;
     align-items: center;
