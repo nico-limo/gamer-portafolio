@@ -1,13 +1,15 @@
 import React from 'react'
 //CSS
 import "./Profile.css"
+//Material UI
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 //Local
 import profilePic from "../../images/profile.jpg";
 import health from "../../images/health.png";
-import linkedinIcon from "../../images/icons/linkedin.png";
-import githubIcon from "../../images/icons/github.png";
-import whatsappIcon from "../../images/icons/whatsapp.png";
-import emailIcon from "../../images/icons/email.png";
+
 
 const Profile = () => {
     return (
@@ -27,10 +29,11 @@ const Profile = () => {
                 </div>
                 <div className="profile__redes">
                     <span>Clanes:</span>
-                    <a href=""><img src={linkedinIcon} alt=""/></a>
-                    <a href=""><img src={githubIcon} alt=""/></a>
-                    <a href=""><img src={whatsappIcon} alt=""/></a>
-                    <a href=""><img src={emailIcon} alt=""/></a>
+                    <LinkedInIcon className="icon"/> 
+                    <GitHubIcon className="icon"/> 
+                    <EmailIcon className="icon"/> 
+                    <WhatsAppIcon className="icon" /> 
+                   
                 </div>
             </div>
         </div>

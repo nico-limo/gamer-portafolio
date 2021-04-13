@@ -1,37 +1,81 @@
 .profile {
+    margin: 0.1%;
+    background-color: rgba(0, 0, 0, 0.603);
+    border: cyan 2px solid;
     display: flex;
     flex-direction: row;
-    height: 40vh;
+    height: 20vh;
+    width: 35%;
 }
 
 .profile__left {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 35%;
-    background-color: magenta;
+    width: 50%; 
+    height: auto;   
+    padding-top: 1%;
 }
 
 .profile__left > img {
-    height: 25vh;
-    width: 15vw;
+    height: 13vh;
+    width: 7vw;
     border-radius: 50%;
+    padding-bottom: 2%;
+}
+
+.profile_status {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile_status > img {
+    height: 10vh;
 }
 
 .profile__right {
-    width: 65%;
-    background-color: blue;
+    width: 100%;
+    height: auto;
+    padding-left: 2%;
 }
+
+.profile__redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.icon {
+    color: white;
+    margin: 0 5%;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: cyan;
+    transition: 400ms ease;
+}
+
 
 
 
 @media screen and (max-width: 600px) {
+
     .profile {
-        height: 30vw;
+        margin: 1%;
+        background-color: rgba(0, 0, 0, 0.603);
+        border: cyan 2px solid;
+        display: flex;
+        flex-direction: row;
+        height: 18vh;
+        width: auto;
     }
 
     .profile__left {
         display: flex;
+        width: 35%;
         padding-top: 2%;
         flex-wrap: wrap;
         justify-content: center;
@@ -44,14 +88,20 @@
         padding-bottom: 2%;
     }
 
+    .profile__right {
+        width: 65%;
+        padding-left: 2%;
+    }
+
     .profile__info {
         padding-left: 2%;
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 800;
     }
 
+
     .profile__redes{
-        padding-left: 2%;
+        padding-left: 1%;
         font-size: 15px;
         font-weight: 800;
     }
@@ -65,17 +115,10 @@
         height: 4vh;
     }
 
-    .profile__redes {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+    .icon {
+        margin: 0 3%;
+        transform: scale(1.2);
     }
 
-    .profile__redes > a > img {
-        height: 6vw;
-        background-color: chartreuse;
-        cursor: pointer;
-    }
 
   }
