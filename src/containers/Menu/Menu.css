@@ -8,29 +8,42 @@
     height: 50vh;
 }
 
-.menu_link {
+.menu_link {    
+    display: flex;
+    align-items: center;
     font-size: 25px;
     color: white;
     text-decoration: none;
 }
 
-.menu_link > p {
+.menu_link  p {
     border-bottom: 2px transparent solid; 
 }
 
-.menu_link > p:hover {
+.menu_link  p:hover {
     border-bottom: solid 2px white;
     transition: all 200ms  ease-in;
 }
 
+.active {
+    margin-left: 20px;
+    transform: scale(1.3);
+}
+
+.no-active {
+    visibility: hidden;
+}
 
 @media screen and (max-width: 600px) {
     .menu {
-        margin-top: 50%;
-        margin: 30% 2%;
+        margin: 15% 2%;
+        justify-content: center;
     }
     
     .menu_link {
         font-size: 20px;
+    }
+    .active {
+        visibility: hidden;
     }
   }

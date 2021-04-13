@@ -44,8 +44,7 @@
 
 @media screen and (max-width: 600px) {
     .startmenu {
-        margin: 10% 2%;
-        height: 30%;
+        margin: 15% 2%;
     }
         
     .startmenu__info > p{

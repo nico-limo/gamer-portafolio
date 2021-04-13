@@ -1,8 +1,6 @@
 import React from "react";
 //React router Dom
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-//CSS
-import "./App.css";
 //Containers
 import StartMenu from "../StartMenu/StartMenu";
 import Menu from "../Menu/Menu";

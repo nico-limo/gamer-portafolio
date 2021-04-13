@@ -18,8 +18,9 @@
 }
 
 .profile__left > img {
-    height: 13vh;
-    width: 7vw;
+    max-height: 6vw;
+    width: 6vw;
+    object-fit: cover;
     border-radius: 50%;
     padding-bottom: 2%;
 }
@@ -29,7 +30,7 @@
     flex-direction: row;
 }
 
-.profile_status > img {
+.profile_status  img {
     height: 10vh;
 }
 
@@ -37,6 +38,12 @@
     width: 100%;
     height: auto;
     padding-left: 2%;
+}
+
+.profile__info p {
+    padding-left: 2%;
+    font-size: 0.8vw;
+    font-weight: 800;
 }
 
 .profile__redes {
@@ -82,8 +89,9 @@
     }
 
     .profile__left > img {
-        height: 10vh;
-        width: 25vw;
+        max-height: 10vh;
+        width: 20vw;
+        object-fit: cover;
         border-radius: 50%;
         padding-bottom: 2%;
     }
@@ -93,9 +101,9 @@
         padding-left: 2%;
     }
 
-    .profile__info {
+    .profile__info p {
         padding-left: 2%;
-        font-size: 13px;
+        font-size: 3.4vw;
         font-weight: 800;
     }
 
