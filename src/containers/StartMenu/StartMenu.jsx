@@ -19,7 +19,7 @@ const StartMenu = () => {
       setTimeout(() => {
         setClicked(true)
         history.push("/menu")
-      }, 1000);
+      }, 600);
       
     }
   }
@@ -37,7 +37,8 @@ const StartMenu = () => {
      
       <div className="startmenu__info">
       <h1>PORTAFOLIO</h1>
-      <p>Bienvenidos a mi portafolio, el mismo esta creado para mobile first y tiene intenciones de ser responsive y poder utilizarse y modificarse desde la misma pagina</p>
+      <p>Bienvenidos a mi portafolio, el mismo esta creado para mobile first y tiene intenciones de ser responsive y poder utilizarse y modificarse desde la misma pagina.</p>
+      <p><strong>Navegue utilizando las flechas y presionando enter o space para un mayor efecto arcade</strong></p>
       </div>
          <Link to="/menu" className="startmenu__link"><h3>START GAME</h3></Link>
 

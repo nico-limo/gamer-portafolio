@@ -31,7 +31,7 @@
 }
 
 .profile_status  img {
-    height: 10vh;
+    height: 4vw;
 }
 
 .profile__right {
@@ -54,10 +54,14 @@
     justify-content: left;
 }
 
+.profile__redes span {
+    font-size: 1vw;
+}
+
 .icon {
     color: white;
-    margin: 0 5%;
-    transform: scale(1.5);
+    margin: 0 3%;
+    font-size: 1.8vw !important;
     cursor: pointer;
 }
 
