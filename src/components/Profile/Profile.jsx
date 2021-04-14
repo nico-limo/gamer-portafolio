@@ -33,7 +33,6 @@ const Profile = () => {
                     <GitHubIcon className="icon"/> 
                     <EmailIcon className="icon"/> 
                     <WhatsAppIcon className="icon" /> 
-                   
                 </div>
             </div>
         </div>

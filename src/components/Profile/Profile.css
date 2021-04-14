@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: row;
     height: 20vh;
+    min-height: 20vh;
     width: 35%;
 }
 
@@ -55,7 +56,7 @@
 }
 
 .profile__redes span {
-    font-size: 1vw;
+    font-size: 1.1vw;
 }
 
 .icon {
@@ -79,8 +80,6 @@
         margin: 1%;
         background-color: rgba(0, 0, 0, 0.603);
         border: cyan 2px solid;
-        display: flex;
-        flex-direction: row;
         height: 18vh;
         width: auto;
     }
@@ -128,9 +127,13 @@
         height: 4vh;
     }
 
+    .profile__redes span {
+        font-size: 3vw;
+    }
+
     .icon {
         margin: 0 3%;
-        transform: scale(1.2);
+        font-size: 6.5vw !important;
     }
 
 

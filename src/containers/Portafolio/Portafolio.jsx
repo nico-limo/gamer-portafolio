@@ -4,14 +4,14 @@ import useSound from "use-sound";
 import moveSound from "../../sounds/cursor.mp3";
 import selectSound from "../../sounds/select.mp3";
 //CSS
-import "./Menu.css";
+import "../Menu/Menu.css";
 //Utils
-import {menuLink} from "../../utils/spanish/routesName";
+import {userMenuLink} from "../../utils/spanish/routesName";
 //React Router Dom
 import { Link, useHistory } from 'react-router-dom'
 //Material Ui
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-const Menu = () => {
+const Portafolio = () => {
   const history = useHistory();
   const [playmove] = useSound(moveSound, {volume : 0.5})
   const [playselect] = useSound(selectSound, {volume : 0.5})
@@ -30,16 +30,16 @@ const Menu = () => {
       setTimeout(() => {
         switch (selected) {
           case 0:
-            history.push(menuLink.portafolio)
+            history.push(userMenuLink.about)
             break;
           case 1:
-            history.push(menuLink.edit)
+            history.push(userMenuLink.skills)
             break;
           case 2:
-            history.push(menuLink.options)
+            history.push(userMenuLink.projects)
             break;
           case 3:
-            history.push(menuLink.back)
+            history.push(userMenuLink.back)
             break;
           default:
             break;
@@ -60,12 +60,13 @@ const Menu = () => {
   return (
     <div  onKeyDown={(e) => arrowsActions(e)} className="menu">
         <h1>Menu</h1>
-        <Link className="menu_link" to={menuLink.portafolio}><p>Continuar Partida</p> <ArrowBackIosIcon className={`${selected === 0 ? 'active' : 'no-active' }`} /> </Link>
-        <Link className="menu_link" to={menuLink.edit}><p>Cargar Partida (admin)</p> <ArrowBackIosIcon className={`${selected === 1 ? 'active' : 'no-active' }`}/> </Link>
-        <Link className="menu_link" to={menuLink.options}><p>Opciones</p> <ArrowBackIosIcon className={`${selected === 2 ? 'active' : 'no-active' }`}/> </Link>
-        <Link className="menu_link" to={menuLink.back}><p>Volver</p> <ArrowBackIosIcon className={`${selected === 3 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={userMenuLink.about}><p>Acerca de</p> <ArrowBackIosIcon className={`${selected === 0 ? 'active' : 'no-active' }`} /> </Link>
+        <Link className="menu_link" to={userMenuLink.skills}><p>Habilidades</p> <ArrowBackIosIcon className={`${selected === 1 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={userMenuLink.projects}><p>Proyectos</p> <ArrowBackIosIcon className={`${selected === 2 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={userMenuLink.back}><p>Volver</p> <ArrowBackIosIcon className={`${selected === 3 ? 'active' : 'no-active' }`}/> </Link>
     </div>
   );
 };
 
-export default Menu;
+export default Portafolio;
+
