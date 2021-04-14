@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import StartMenu from "../StartMenu/StartMenu";
 import Menu from "../Menu/Menu";
 import Portafolio from "../Portafolio/Portafolio";
+import Options from "../options/Options";
 //Components
 import Profile from "../../components/Profile/Profile";
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Profile />
         <Switch>
           <Route exact path="/menu" component={Menu}/>
+          <Route exact path="/options" component={Options}/>
           <Route exact path="/portafolio" component={Portafolio}/>
           <Route exact path="/" component={StartMenu}/>
         </Switch>

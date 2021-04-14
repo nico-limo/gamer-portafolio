@@ -1,0 +1,18 @@
+export const textEng = {
+    intro: "Welcome to my portafolio, the same one it was created mobile first and is intened to be responsive.",
+    intro2: "Search using the keyboard arrows to improve the experience like video games.",
+    back: "Back",
+    title_options:"Options",
+    language:"Language",
+    mode:"Dark Mode",
+    start:"Start Game",
+    continue: "Continue Game",
+    load: "Load Game",
+    level: "Level",
+    name: "Name",
+    clans: "Clans",
+    class: "Class",
+    about: "About Me",
+    skills: "Skills",
+    projects: "Projects",
+  }

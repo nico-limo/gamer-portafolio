@@ -1,0 +1,37 @@
+.options {
+    background-color: rgba(0, 0, 0, 0.603);
+    border: cyan 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 20%;
+    min-height: 50vh;
+}
+
+.options__menu {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.options__left {
+    width: 100%;
+    background-color: darkgreen;
+    margin-top: 3%;
+    font-size: 25px;
+}
+
+.options__right {
+    width: 50%;
+    background-color: red;
+    font-size: 25px;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.option--active {
+    background-color: royalblue;
+    visibility: hidden;
+}

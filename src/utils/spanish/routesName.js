@@ -1,7 +1,7 @@
 export const menuLink = {
     portafolio: "/portafolio",
     edit: "/edit",
-    options: "/opciones",
+    options: "/options",
     back: "/",
 }
 

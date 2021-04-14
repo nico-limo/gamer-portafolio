@@ -1,4 +1,7 @@
 import React,{useState, useEffect} from "react";
+//Recoil
+import {useRecoilValue} from "recoil";
+import {setTextAtom} from "../../recoil/atoms";
 //Sound
 import useSound from "use-sound";
 import moveSound from "../../sounds/cursor.mp3";
@@ -16,7 +19,7 @@ const Portafolio = () => {
   const [playmove] = useSound(moveSound, {volume : 0.5})
   const [playselect] = useSound(selectSound, {volume : 0.5})
   const [selected, setSelected] = useState(0)
-
+  const text = useRecoilValue(setTextAtom);
   const arrowsActions = (e) => {
     if (e.keyCode === 38 ) {
       selected === 0 ? setSelected(3) : setSelected(selected - 1);
@@ -44,7 +47,7 @@ const Portafolio = () => {
           default:
             break;
         }
-      }, 500);
+      }, 200);
       
     }
     
@@ -60,10 +63,10 @@ const Portafolio = () => {
   return (
     <div  onKeyDown={(e) => arrowsActions(e)} className="menu">
         <h1>Menu</h1>
-        <Link className="menu_link" to={userMenuLink.about}><p>Acerca de</p> <ArrowBackIosIcon className={`${selected === 0 ? 'active' : 'no-active' }`} /> </Link>
-        <Link className="menu_link" to={userMenuLink.skills}><p>Habilidades</p> <ArrowBackIosIcon className={`${selected === 1 ? 'active' : 'no-active' }`}/> </Link>
-        <Link className="menu_link" to={userMenuLink.projects}><p>Proyectos</p> <ArrowBackIosIcon className={`${selected === 2 ? 'active' : 'no-active' }`}/> </Link>
-        <Link className="menu_link" to={userMenuLink.back}><p>Volver</p> <ArrowBackIosIcon className={`${selected === 3 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={userMenuLink.about}><p>{text.about}</p> <ArrowBackIosIcon className={`${selected === 0 ? 'active' : 'no-active' }`} /> </Link>
+        <Link className="menu_link" to={userMenuLink.skills}><p>{text.skills}</p> <ArrowBackIosIcon className={`${selected === 1 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={userMenuLink.projects}><p>{text.projects}</p> <ArrowBackIosIcon className={`${selected === 2 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={userMenuLink.back}><p>{text.back}</p> <ArrowBackIosIcon className={`${selected === 3 ? 'active' : 'no-active' }`}/> </Link>
     </div>
   );
 };

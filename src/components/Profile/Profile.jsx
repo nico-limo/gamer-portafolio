@@ -9,9 +9,12 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 //Local
 import profilePic from "../../images/profile.jpg";
 import health from "../../images/health.png";
-
+//Recoil
+import {useRecoilValue} from "recoil";
+import {setTextAtom} from "../../recoil/atoms";
 
 const Profile = () => {
+    const text = useRecoilValue(setTextAtom);
     return (
         <div className="profile">
             <div className="profile__left">
@@ -23,12 +26,12 @@ const Profile = () => {
             </div>
             <div className="profile__right">
                 <div className="profile__info">
-                    <p>Nombre: Nicolas Limonoff</p>
-                    <p>Clase: FullStack Developer</p>
-                    <p>Level: Junior</p>
+                    <p>{text.name}: Nicolas Limonoff</p>
+                    <p>{text.class}: FullStack Developer</p>
+                    <p>{text.level}: Junior</p>
                 </div>
                 <div className="profile__redes">
-                    <span>Clanes:</span>
+                    <span>{text.clans}:</span>
                     <LinkedInIcon className="icon"/> 
                     <GitHubIcon className="icon"/> 
                     <EmailIcon className="icon"/> 

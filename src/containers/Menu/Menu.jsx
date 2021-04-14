@@ -1,4 +1,7 @@
 import React,{useState, useEffect} from "react";
+//Recoil
+import {useRecoilValue} from "recoil";
+import {setTextAtom} from "../../recoil/atoms";
 //Sound
 import useSound from "use-sound";
 import moveSound from "../../sounds/cursor.mp3";
@@ -13,10 +16,10 @@ import { Link, useHistory } from 'react-router-dom'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const Menu = () => {
   const history = useHistory();
-  const [playmove] = useSound(moveSound, {volume : 0.5})
-  const [playselect] = useSound(selectSound, {volume : 0.5})
-  const [selected, setSelected] = useState(0)
-
+  const [playmove] = useSound(moveSound, {volume : 0.5});
+  const [playselect] = useSound(selectSound, {volume : 0.5});
+  const [selected, setSelected] = useState(0);
+  const text = useRecoilValue(setTextAtom);
   const arrowsActions = (e) => {
     if (e.keyCode === 38 ) {
       selected === 0 ? setSelected(3) : setSelected(selected - 1);
@@ -44,26 +47,24 @@ const Menu = () => {
           default:
             break;
         }
-      }, 500);
-      
+      }, 200);
     }
-    
   }
   useEffect(() => {
     playmove()
-    document.addEventListener("keydown", arrowsActions)
+    document.addEventListener("keydown", arrowsActions);
 
-    return ()=> document.removeEventListener("keydown", arrowsActions)
+    return ()=> document.removeEventListener("keydown", arrowsActions);
     
   }, [selected])
 
   return (
     <div  onKeyDown={(e) => arrowsActions(e)} className="menu">
         <h1>Menu</h1>
-        <Link className="menu_link" to={menuLink.portafolio}><p>Continuar Partida</p> <ArrowBackIosIcon className={`${selected === 0 ? 'active' : 'no-active' }`} /> </Link>
-        <Link className="menu_link" to={menuLink.edit}><p>Cargar Partida (admin)</p> <ArrowBackIosIcon className={`${selected === 1 ? 'active' : 'no-active' }`}/> </Link>
-        <Link className="menu_link" to={menuLink.options}><p>Opciones</p> <ArrowBackIosIcon className={`${selected === 2 ? 'active' : 'no-active' }`}/> </Link>
-        <Link className="menu_link" to={menuLink.back}><p>Volver</p> <ArrowBackIosIcon className={`${selected === 3 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={menuLink.portafolio}><p>{text.start}</p> <ArrowBackIosIcon className={`${selected === 0 ? 'active' : 'no-active' }`} /> </Link>
+        <Link className="menu_link" to={menuLink.edit}><p>{text.load} (admin)</p> <ArrowBackIosIcon className={`${selected === 1 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={menuLink.options}><p>{text.title_options}</p> <ArrowBackIosIcon className={`${selected === 2 ? 'active' : 'no-active' }`}/> </Link>
+        <Link className="menu_link" to={menuLink.back}><p>{text.back}</p> <ArrowBackIosIcon className={`${selected === 3 ? 'active' : 'no-active' }`}/> </Link>
     </div>
   );
 };

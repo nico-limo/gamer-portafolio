@@ -1,4 +1,7 @@
 import React,{useEffect, useState} from "react";
+//Recoil
+import {useRecoilValue} from "recoil";
+import {setTextAtom} from "../../recoil/atoms";
 //CSS
 import "./StartMenu.css";
 //Sound
@@ -6,12 +9,11 @@ import useSound from "use-sound";
 import selectSound from "../../sounds/select.mp3";
 //React Router Dom
 import { Link, useHistory } from 'react-router-dom'
-//Material Ui
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const StartMenu = () => {
   const history = useHistory();
   const [playselect] = useSound(selectSound, {volume : 0.5});
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
+  const text = useRecoilValue(setTextAtom);
 
   const arrowsActions = (e) => {
     if (e.keyCode === 13 || e.keyCode === 32) {
@@ -19,7 +21,7 @@ const StartMenu = () => {
       setTimeout(() => {
         setClicked(true)
         history.push("/menu")
-      }, 600);
+      }, 200);
       
     }
   }
@@ -37,10 +39,10 @@ const StartMenu = () => {
      
       <div className="startmenu__info">
       <h1>PORTAFOLIO</h1>
-      <p>Bienvenidos a mi portafolio, el mismo esta creado para mobile first y tiene intenciones de ser responsive y poder utilizarse y modificarse desde la misma pagina.</p>
-      <p><strong>Navegue utilizando las flechas y presionando enter o space para un mayor efecto arcade</strong></p>
+      <p>{text.intro}</p>
+      <p><strong>{text.intro2}</strong></p>
       </div>
-         <Link to="/menu" className="startmenu__link"><h3>START GAME</h3></Link>
+         <Link to="/menu" className="startmenu__link"><h3>{text.start}</h3></Link>
 
     </div>
   );
