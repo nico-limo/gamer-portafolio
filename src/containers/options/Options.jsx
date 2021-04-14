@@ -77,7 +77,7 @@ const Options = () => {
       <h1>{text.title_options}</h1>
       <div className="options__menu">
         <ArrowForwardIosIcon
-          className={selected === 0 ? "" : "option--active"}
+          className={selected === 0 ? "no_display_cell" : "option--active"}
         />
         <div className="options__left">
           <p>{text.mode}</p>
@@ -88,7 +88,7 @@ const Options = () => {
       </div>
       <div className="options__menu">
         <ArrowForwardIosIcon
-          className={selected === 1 ? "" : "option--active"}
+          className={selected === 1 ? "no_display_cell" : "option--active"}
         />
         <div className="options__left">
           <p>{text.language}</p>
@@ -99,7 +99,7 @@ const Options = () => {
       </div>
       <Link className="menu_link" to="/menu">
         <ArrowForwardIosIcon
-          className={selected === 2 ? "" : "option--active"}
+          className={selected === 2 ? "no_display_cell" : "option--active"}
         />
         <p>{text.back}</p>
       </Link>

@@ -36,13 +36,12 @@ const StartMenu = () => {
 
   return (
     <div className="startmenu">
-     
       <div className="startmenu__info">
       <h1>PORTAFOLIO</h1>
       <p>{text.intro}</p>
       <p><strong>{text.intro2}</strong></p>
       </div>
-         <Link to="/menu" className="startmenu__link"><h3>{text.start}</h3></Link>
+        <Link to="/menu" className="startmenu__link"><h3>{text.start}</h3></Link>
 
     </div>
   );

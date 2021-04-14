@@ -35,3 +35,37 @@
     background-color: royalblue;
     visibility: hidden;
 }
+
+
+@media screen and (max-width: 600px) {
+    .options {
+        margin: 5% 15%;
+        min-height: 30vh;
+    }
+    .options__menu {
+        width: 90%;
+    }
+
+    .options__left {
+        width: 60%;
+        margin-top: 3%;
+        font-size: 10px;
+    }
+
+    .options__right{
+        width: 40%;
+        font-size: 10px;
+    }
+
+    #icon__arrow {
+        display: none;
+        color: chocolate;
+        background-color:blue !important ;
+    }
+
+    .no_display_cell {
+        display: none;
+        visibility: hidden;
+    }
+
+  }

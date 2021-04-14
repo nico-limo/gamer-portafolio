@@ -32,15 +32,15 @@
     text-decoration: none;
 }
 
-.startmenu__link > h3 {
+.startmenu__link  h3 {
     border-bottom: 2px solid transparent;
     font-size: 35px;
     color: white;
     display: flex;
-    margin-top: 50%;
+    
  }
 
-.startmenu__link > h3:hover {
+.startmenu__link  h3:hover {
    border-bottom: 2px solid white;
    transition: all 200ms  ease-in;
 }
@@ -51,16 +51,23 @@
 
 @media screen and (max-width: 600px) {
     .startmenu {
-        margin: 15% 2%;
+        margin: 10% 2%;
     }
         
-    .startmenu__info > p{
+    .startmenu__info p{
+        font-size: 18px;
+    }    
+    .startmenu__info {
         font-size: 18px;
     }    
     
     .startmenu__link {
-        font-size: 20px;
-        margin: 0 10%;
+        font-size: 5px;
+        margin: 0 5%;
     }
+
+    .startmenu__link  h3 {
+        font-size: 20px;        
+     }
 
   }

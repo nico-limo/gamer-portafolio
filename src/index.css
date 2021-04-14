@@ -13,19 +13,18 @@
 body {
   margin: 0;
   background-image: url(./images/bg.jpg);
-  height: 95vh;
+  background-size: cover;
   font-family: arcade, serif;
   color: whitesmoke;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   padding: 1%;
 }
 
 @media screen and (max-width: 600px) {
   body {
-    height: 97vh;
     background-image: url(./images/bg1.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     padding: 2%;
   }
 }
