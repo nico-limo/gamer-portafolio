@@ -6,8 +6,12 @@ export const menuLink = {
 }
 
 export const userMenuLink = {
-    about: "/about",
-    skills: "/skills",
-    projects: "/projects",
+    about: "/portafolio/about",
+    skills: "/portafolio/skills",
+    projects: "/portafolio/projects",
     back: "/menu",
+}
+
+export const PortafolioLink = {
+    back: "/portafolio",
 }

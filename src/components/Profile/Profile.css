@@ -1,7 +1,7 @@
 .profile {
     margin: 0.1%;
     background-color: rgba(0, 0, 0, 0.603);
-    border: cyan 2px solid;
+    border: var(--border);
     display: flex;
     flex-direction: row;
     height: 20vh;

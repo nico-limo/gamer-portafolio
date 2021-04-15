@@ -1,5 +1,5 @@
 export const texto = {
-  intro: "Bienvenidos a mi portafolio, el mismo esta creado para mobile first y tiene intenciones de ser responsive y poder utilizarse y modificarse desde la misma pagina.",
+  intro: "Bienvenidos a mi portafolio. El mismo fue realizado utilizando react, atomos, firebase y mucho amor.",
   intro2: "Navegue utilizando las flechas y presionando enter o space para un mayor efecto arcade",
   back: "Volver",
   title_options:"Opciones",

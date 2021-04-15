@@ -1,19 +1,29 @@
 .menu {
     background-color: rgba(0, 0, 0, 0.603);
-    border: cyan 2px solid;
+    border: var(--border);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5% 20%;
-    min-height: 50vh;
+    margin: var(--margin-menu);
+    min-height: var(--min-height-menu);
 }
 
 .menu_link {    
     display: flex;
     align-items: center;
-    font-size: 25px;
-    color: white;
+    font-size: var(--font-size-menu);
+    color: var(--color-font-menu);
     text-decoration: none;
+}
+
+.menu__back {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top: var(--color-border-menu);
+    margin-top: 5%;
 }
 
 .menu_link  p {
@@ -27,7 +37,7 @@
 
 .active {
     margin-left: 20px;
-    font-size: 28px !important;
+    font-size: var(--font-size-menu) !important;
 }
 
 .no-active {
@@ -36,7 +46,7 @@
 
 @media screen and (max-width: 600px) {
     .menu {
-        margin: 15% 2%;
+        margin: var(--margin-menu-mobile);
         justify-content: center;
     }
     

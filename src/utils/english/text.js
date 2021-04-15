@@ -1,6 +1,6 @@
 export const textEng = {
-    intro: "Welcome to my portafolio, the same one it was created mobile first and is intened to be responsive.",
-    intro2: "Search using the keyboard arrows to improve the experience like video games.",
+    intro: "Welcome to my portafolio. The same one it was building with react, atomos,firebase and love.",
+    intro2: "Navigate using the keyboard arrows to improve the experience like video games.",
     back: "Back",
     title_options:"Options",
     language:"Language",

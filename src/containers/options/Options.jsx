@@ -24,11 +24,11 @@ const Options = () => {
   const [text, setText] = useRecoilState(setTextAtom);
   const arrowsActions = (e) => {
     if (e.keyCode === 38) {
-        playmove();
+      playmove();
       selected === 0 ? setSelected(2) : setSelected(selected - 1);
     }
     if (e.keyCode === 40) {
-        playmove();
+      playmove();
       selected === 2 ? setSelected(0) : setSelected(selected + 1);
     }
     if (e.keyCode === 13 || e.keyCode === 32) {
@@ -56,11 +56,9 @@ const Options = () => {
 
   const handleClickL = () => {
     setSelected(0);
-    language === "spanish"
-      ? setLanguage("english")
-      : setLanguage("spanish");
+    language === "spanish" ? setLanguage("english") : setLanguage("spanish");
     console.log(language);
-  }
+  };
 
   useEffect(() => {
     language === "spanish" ? setText(texto) : setText(textEng);
@@ -97,12 +95,14 @@ const Options = () => {
           <p>{language}</p>
         </div>
       </div>
-      <Link className="menu_link" to="/menu">
-        <ArrowForwardIosIcon
-          className={selected === 2 ? "no_display_cell" : "option--active"}
-        />
-        <p>{text.back}</p>
-      </Link>
+      <div className="option__link">
+        <Link className="menu_link" to="/menu">
+          <ArrowForwardIosIcon
+            className={selected === 2 ? "no_display_cell" : "option--active"}
+          />
+          <p>{text.back}</p>
+        </Link>
+      </div>
     </div>
   );
 };

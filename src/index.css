@@ -10,6 +10,16 @@
   font-weight: normal;
 }
 
+:root {
+  --font-size-menu: 25px;
+  --color-font-menu: white;
+  --color-border-menu: whitesmoke 2px solid;
+  --min-height-menu: 60vh;
+  --margin-menu: 2% 20%;
+  --border: cyan 2px solid;
+  --margin-menu-mobile: 10% 5%;
+}
+
 body {
   margin: 0;
   background-image: url(./images/bg.jpg);

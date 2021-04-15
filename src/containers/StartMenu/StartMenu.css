@@ -1,11 +1,11 @@
 .startmenu {
     background-color: rgba(0, 0, 0, 0.603);
-    border: cyan 2px solid;
+    border: var(--border);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2% 20%;
-    min-height: 60vh;
+    margin: var(--margin-menu);
+    min-height: var(--min-height-menu);
 }
 
 .startmenu__info{
@@ -16,8 +16,7 @@
 }
 
 .startmenu__info > p{
-    font-size: 25px;
-    flex: 1;
+    font-size: var(--font-size-menu);
 }
 
 .startmenu__info > h1{
@@ -28,17 +27,30 @@
 
 .startmenu__link {
     display: flex;
-    color: white;
+    color: var(--color-font-menu);
     text-decoration: none;
 }
 
 .startmenu__link  h3 {
     border-bottom: 2px solid transparent;
     font-size: 35px;
-    color: white;
+    color: var(--color-font-menu);  
     display: flex;
+    animation: glow 1s ease-in-out infinite alternate;
+    
     
  }
+
+ @keyframes glow {
+    from {
+        opacity: 0.5;
+      text-shadow: 0 0 20px #d1d3d3;
+    }
+    to {
+        opacity: 1;
+      text-shadow: 0 0 30px #bec3c3, 0 0 10px #e6edee;
+    }
+  }
 
 .startmenu__link  h3:hover {
    border-bottom: 2px solid white;
@@ -51,7 +63,7 @@
 
 @media screen and (max-width: 600px) {
     .startmenu {
-        margin: 10% 2%;
+        margin: var(--margin-menu-mobile);
     }
         
     .startmenu__info p{

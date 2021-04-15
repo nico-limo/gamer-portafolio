@@ -1,11 +1,11 @@
 .options {
     background-color: rgba(0, 0, 0, 0.603);
-    border: cyan 2px solid;
+    border: var(--border);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5% 20%;
-    min-height: 50vh;
+    margin: var(--margin-menu);
+    min-height: var(--min-height-menu);
 }
 
 .options__menu {
@@ -14,22 +14,31 @@
     flex-direction: row;
     align-items: center;
     text-align: center;
+    font-size: var(--font-size-menu);
+    margin-top: 5%;
+}
+
+.option__link {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top: var(--color-border-menu);
+    margin-top: 5%;
 }
 
 .options__left {
     width: 100%;
     background-color: darkgreen;
-    margin-top: 3%;
-    font-size: 25px;
 }
 
 .options__right {
     width: 50%;
     background-color: red;
-    font-size: 25px;
-    margin-top: 3%;
     cursor: pointer;
 }
+
 
 .option--active {
     background-color: royalblue;
@@ -39,16 +48,16 @@
 
 @media screen and (max-width: 600px) {
     .options {
-        margin: 5% 15%;
+        margin: 40% 5%;
         min-height: 30vh;
     }
     .options__menu {
         width: 90%;
+        margin-top: 3%;
     }
 
     .options__left {
         width: 60%;
-        margin-top: 3%;
         font-size: 10px;
     }
 
@@ -57,10 +66,9 @@
         font-size: 10px;
     }
 
-    #icon__arrow {
-        display: none;
-        color: chocolate;
-        background-color:blue !important ;
+    .option__link {
+        width: 50%;
+        margin-top: 5%;
     }
 
     .no_display_cell {
