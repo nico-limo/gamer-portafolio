@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
 //CSS
-import "./About.css";
+import "./Skills.css";
 //React Router Dom
 import { Link, useHistory } from "react-router-dom";
 //Recoil
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { setTextAtom, profileAtom } from "../../recoil/atoms";
+import { setTextAtom, profileAtom, languageAtom } from "../../recoil/atoms";
 //Utils
 import { PortafolioLink } from "../../utils/routesName";
+import { listSoftEng, listSoftSpn, listTech, randomfrase, randomPhrase } from "../../utils/listItems";
 //Sound
 import useSound from "use-sound";
 import selectSound from "../../sounds/select.mp3";
-const About = () => {
+
+const Skills = () => {
   const history = useHistory();
   const [playselect] = useSound(selectSound, { volume: 0.5 });
   const [clicked, setClicked] = useState(false);
   const text = useRecoilValue(setTextAtom);
+  const language = useRecoilValue(languageAtom);
   const setProfile = useSetRecoilState(profileAtom);
   const arrowsActions = (e) => {
     if (e.keyCode === 13 || e.keyCode === 32) {
@@ -26,6 +29,7 @@ const About = () => {
       }, 200);
     }
   };
+
 
   useEffect(() => {
     setProfile(true);
@@ -40,17 +44,22 @@ const About = () => {
   }, [clicked]);
 
   return (
-    <div className="about">
-      <h1>{text.about}</h1>
-      <div className="about__container">
-        <div className="about__left">
-          <p>INFO IZQ</p>
+    <div className="skills">
+      <h1>{text.skills}</h1>
+      <div className="skills__container">
+        <div className="skills__left">
+          <h3>{text.tech}</h3>
+          <ul>
+          {listTech}
+          </ul>
         </div>
-        <div className="about__right">
-          <p>INFO DER</p>
+        <div className="skills__right">
+          <h3>{text.social}</h3>
+          <ul>
+          {language === "spanish" ? listSoftSpn : listSoftEng}
+          </ul>
         </div>
       </div>
-
       <Link to={PortafolioLink.back} className="menu_link">
         <p>{text.back}</p>
       </Link>
@@ -58,4 +67,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Skills;

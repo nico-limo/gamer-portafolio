@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //Recoil
-import { useRecoilValue } from "recoil";
-import { setTextAtom } from "../../recoil/atoms";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { setTextAtom, profileAtom } from "../../recoil/atoms";
 //Sound
 import useSound from "use-sound";
 import moveSound from "../../sounds/cursor.mp3";
@@ -20,6 +20,7 @@ const Portafolio = () => {
   const [playselect] = useSound(selectSound, { volume: 0.5 });
   const [selected, setSelected] = useState(0);
   const text = useRecoilValue(setTextAtom);
+  const setProfile = useSetRecoilState(profileAtom);
   const arrowsActions = (e) => {
     if (e.keyCode === 38) {
       selected === 0 ? setSelected(3) : setSelected(selected - 1);
@@ -49,16 +50,21 @@ const Portafolio = () => {
       }, 200);
     }
   };
+
+  useEffect(() => {
+    setProfile(true);
+    return () => setProfile(false);
+  }, [])
+
   useEffect(() => {
     playmove();
     document.addEventListener("keydown", arrowsActions);
-
     return () => document.removeEventListener("keydown", arrowsActions);
   }, [selected]);
 
   return (
     <div onKeyDown={(e) => arrowsActions(e)} className="menu">
-      <h1>Menu</h1>
+      <h1>{text.portafolio}</h1>
       <Link className="menu_link" to={userMenuLink.about}>
         <p>{text.about}</p>
         <ArrowBackIosIcon

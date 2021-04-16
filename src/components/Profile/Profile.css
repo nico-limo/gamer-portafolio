@@ -9,6 +9,13 @@
     width: 35%;
 }
 
+.empty {
+    margin: 0.3%;
+    height: 20vh;
+    min-height: 20vh;
+    width: 35%;
+}
+
 .profile__left {
     display: flex;
     flex-wrap: wrap;

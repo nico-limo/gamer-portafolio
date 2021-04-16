@@ -55,5 +55,6 @@
     }
     .active {
         visibility: hidden;
+        font-size: 0px !important;
     }
   }

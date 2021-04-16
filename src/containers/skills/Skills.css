@@ -1,0 +1,45 @@
+.skills {
+    background-color: rgba(0, 0, 0, 0.603);
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: var(--margin-menu);
+    min-height: var(--min-height-menu);
+  }
+
+.skills__phrase{
+    font-size: var(--font-size-menu);
+}
+
+.skills__container{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.skills__left ul{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-right: 5%;
+    border-right: var(--color-border-menu);
+}
+
+.skills__left ul li{
+    margin: 5%;
+}
+
+.skills__right ul{
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.skills__right ul li{
+    margin: 5%;
+}

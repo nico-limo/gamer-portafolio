@@ -15,3 +15,11 @@ export const setTextAtom = atom({
         type: 'log'
     }
 })
+
+export const profileAtom = atom({
+    key: 'profileAtom',
+    default: false,
+    persistence_UNSTABLE: {
+        type: 'log'
+    }
+})

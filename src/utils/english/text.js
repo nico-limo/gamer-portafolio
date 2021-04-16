@@ -1,5 +1,5 @@
 export const textEng = {
-    intro: "Welcome to my portafolio. The same one it was building with react, atomos,firebase and love.",
+    intro: "Welcome to my portafolio. The same one it was created with react, atomos,firebase and love.",
     intro2: "Navigate using the keyboard arrows to improve the experience like video games.",
     back: "Back",
     title_options:"Options",
@@ -15,4 +15,7 @@ export const textEng = {
     about: "About Me",
     skills: "Skills",
     projects: "Projects",
+    tech: "Technologies",
+    social: "Social",
+    portafolio:"Nico's Profile",
   }

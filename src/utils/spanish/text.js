@@ -15,4 +15,7 @@ export const texto = {
   about: "Acerca de",
   skills: "Habilidades",
   projects: "Proyectos",
+  tech: "Tecnologias",
+  social: "Social",
+  portafolio:"Perfil de Nico",
 }

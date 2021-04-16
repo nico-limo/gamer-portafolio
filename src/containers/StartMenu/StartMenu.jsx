@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //Recoil
-import { useRecoilValue } from "recoil";
-import { setTextAtom } from "../../recoil/atoms";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { setTextAtom, profileAtom } from "../../recoil/atoms";
 //CSS
 import "./StartMenu.css";
 //Sound
@@ -14,6 +14,7 @@ const StartMenu = () => {
   const [playselect] = useSound(selectSound, { volume: 0.5 });
   const [clicked, setClicked] = useState(false);
   const text = useRecoilValue(setTextAtom);
+  const setProfile = useSetRecoilState(profileAtom);
 
   const arrowsActions = (e) => {
     if (e.keyCode === 13 || e.keyCode === 32) {
@@ -27,8 +28,8 @@ const StartMenu = () => {
 
   useEffect(() => {
     playselect();
+    setProfile(false);
     document.addEventListener("keydown", arrowsActions);
-
     return () => document.removeEventListener("keydown", arrowsActions);
   }, [clicked]);
 

@@ -11,11 +11,12 @@ import profilePic from "../../images/profile.jpg";
 import health from "../../images/health.png";
 //Recoil
 import {useRecoilValue} from "recoil";
-import {setTextAtom} from "../../recoil/atoms";
+import {setTextAtom, profileAtom} from "../../recoil/atoms";
 
 const Profile = () => {
     const text = useRecoilValue(setTextAtom);
-    return (
+    const profile = useRecoilValue(profileAtom);
+    return profile ? (
         <div className="profile">
             <div className="profile__left">
                 <img src={profilePic} alt="profile"/>
@@ -39,7 +40,7 @@ const Profile = () => {
                 </div>
             </div>
         </div>
-    )
+    ) : ( <div className="empty"></div> )
 }
 
 export default Profile
